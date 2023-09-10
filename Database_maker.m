@@ -13,15 +13,18 @@ sample_rate = 1;
 
 % load nets  - Semantic segmentation, optical flow
 % semantic segmentation
-pretrainedURL = 'https://www.mathworks.com/supportfiles/vision/data/deeplabv3plusResnet18CamVid.mat';
+pretrainedURL = 'https://ssd.mathworks.com/supportfiles/vision/data/deeplabv3plusResnet18CamVid.zip';
 pretrainedFolder = fullfile(tempdir,'pretrainedNetwork');
-pretrainedNetwork = fullfile(pretrainedFolder,'deeplabv3plusResnet18CamVid.mat'); 
-if ~exist(pretrainedNetwork,'file')
+pretrainedNetworkZip = fullfile(pretrainedFolder,'deeplabv3plusResnet18CamVid.zip'); 
+if ~exist(pretrainedNetworkZip,'file')
     mkdir(pretrainedFolder);
     disp('Downloading pretrained network (58 MB)...');
-    websave(pretrainedNetwork,pretrainedURL);
+    websave(pretrainedNetworkZip,pretrainedURL);
 end
-segnet = load(pretrainedNetwork);
+unzip(pretrainedNetworkZip, pretrainedFolder)
+pretrainedNetwork = fullfile(pretrainedFolder,'deeplabv3plusResnet18CamVid.mat');  
+data = load(pretrainedNetwork);
+segnet = data.net;
 
 % optical flow
 opticflow = opticalFlowHS;
