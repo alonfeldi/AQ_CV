@@ -9,7 +9,7 @@ The code in this repository serves the following purposes:
 
 3. Network Architecture: The net_lgraph.mat file contains a pre-trained network architecture used in the project. This architecture may be referenced in the main.m script for model training.
 
-4. Semantic Segmentation Network: The semantic_segmentation_Net.m script provides a pre-trained semantic segmentation network, which is presumably used as part of the database creation process.
+4. Semantic Segmentation Network: The Semantic_segmentation_Net.m script provides a pre-trained semantic segmentation network, which is presumably used as part of the database creation process.
 
 
 If you have any questions, feel free to contact me,
