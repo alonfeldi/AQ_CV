@@ -3,7 +3,7 @@ This repository contains code and resources related to a research project descri
 Overview:
 The code in this repository serves the following purposes:
 
-1. Database Creation: The Database_maker.m script is responsible for creating a database from video data and sensor measurements. The provided sensor measurements are in the form of a CSV file, and the resulting database includes visual features extracted from the video frames (RGB), object detection items, semantic segmentation, optical flow, as well as sensor data such as timestamp, CO2 levels, PM2.5 levels, and other available measurements. Sample data files are provided in the data directory.
+1. Database Creation: The Database_maker.m script is responsible for creating a database from video data and sensor measurements. The provided sensor measurements are in the form of a CSV file, and the resulting database includes visual features extracted from the video frames (RGB), semantic segmentation, optical flow, as well as sensor data such as timestamp, CO2 levels, PM2.5 levels, and other available measurements. Sample data files are provided in the data directory.
 
 2. Model Training and Evaluation: The main.m script is used to train and evaluate a model based on the created database. This script likely implements the methodology described in the paper and serves as the core of the research project.
 
